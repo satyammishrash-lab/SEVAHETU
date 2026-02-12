@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SEVAHETU – Emergency Support India</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{margin:0;font-family:Arial;background:#f4f7ff;color:#0a2d57}
+section{padding:70px 20px;text-align:center}
+.hero{background:#eef4ff}
+h1{font-size:38px}
+p{max-width:700px;margin:auto;color:#333}
+
+.btn{padding:12px 22px;border-radius:8px;border:none;font-size:16px;margin:6px;cursor:pointer}
+.blue{background:#2563eb;color:white}
+.outline{background:white;border:2px solid #2563eb;color:#2563eb}
+
+.cards{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.card{background:#f7fbff;padding:25px;border-radius:12px;width:260px;text-align:left}
+
+.how{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:40px}
+.list{text-align:left;max-width:400px}
+
+.launch{background:#2563eb;color:white}
+.notify{display:flex;justify-content:center;gap:15px;margin-top:25px;flex-wrap:wrap}
+.notify input{padding:14px;width:280px;border-radius:8px;border:none}
+.notify button{padding:14px 24px;border:none;border-radius:8px;background:white;color:#2563eb;font-weight:bold}
+
+footer{background:#0f1f33;color:white;padding:60px 20px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;max-width:1100px;margin:auto}
+footer a{color:#c7d2fe;text-decoration:none}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 22px;
+border-radius:50px;
+text-decoration:none;
+}
+
+.copyright{text-align:center;margin-top:40px;color:#94a3b8}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<h1>
+Ground-Level Emergency Non-Medical Support<br>
+When Every Minute Matters<br>
+Powered by Technology
+</h1>
+
+<p>SEVAHETU helps patients navigate hospitals faster during emergencies through real-time coordination and on-ground support.</p>
+
+<button class="btn outline">Contact on WhatsApp</button>
+<button class="btn blue">Understanding How Sevahertu Works</button>
+<button class="btn blue">We're in Development...</button>
+</section>
+
+<section>
+<h2>The Real Emergency Problem Isn't Just Ambulances</h2>
+<div class="cards">
+<div class="card"><b>Confusion</b><p>Patients don’t know which hospital fits their condition.</p></div>
+<div class="card"><b>Delays</b><p>Paperwork & navigation waste critical time.</p></div>
+<div class="card"><b>Navigation Issues</b><p>Families feel lost inside big hospitals.</p></div>
+</div>
+</section>
+
+<section>
+<h2>How SEVAHETU Helps</h2>
+<div class="how">
+<div class="list">
+<p>✅ Location based hospital discovery</p>
+<p>✅ Condition based matching</p>
+<p>✅ Advance coordination</p>
+<p>✅ Ground-level guidance</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Why Sevahertu Matters</h2>
+<div class="cards">
+<div class="card">Saves Time</div>
+<div class="card">Reduces Panic</div>
+<div class="card">Improves Experience</div>
+<div class="card">Supports Patients</div>
+</div>
+</section>
+
+<section>
+<h2>Working Towards Licensed Partnerships</h2>
+<div class="cards">
+<div class="card">Ambulances</div>
+<div class="card">Test Labs</div>
+<div class="card">Pharmacies</div>
+</div>
+</section>
+
+<section>
+<h2>Transparency & Ethics</h2>
+<p>✔ Patient privacy respected<br>
+✔ Data only for emergencies<br>
+✔ No medical diagnosis provided</p>
+</section>
+
+<section class="launch">
+<h2>Emergency Support Service – In Development</h2>
+<p>We're bringing Sevahertu emergency support across India.</p>
+
+<div class="notify">
+<input placeholder="Your email address">
+<button>Notify Me</button>
+</div>
+</section>
+
+<footer>
+<div class="footer-grid">
+
+<div>
+<b>About Us</b><br><br>
+Registered MSME – Govt of India<br>
+UDYAM-DL-04-0071224
+</div>
+
+<div>
+<b>Quick Links</b><br>
+How it Works<br>
+Contact<br>
+Privacy Policy
+</div>
+
+<div>
+<b>Contact</b><br>
+helpsevahertu@gmail.com<br>
++91 7982600602<br>
+Delhi, India
+</div>
+
+<div>
+<b>Social</b><br>
+X – sevahetu<br>
+LinkedIn – SEVAHETU
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 SEVAHETU. All rights reserved.
+</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917982600602?text=I%20need%20emergency%20support%20from%20SEVAHETU" target="_blank">
+Emergency WhatsApp
+</a>
+
+</body>
+</html>
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
