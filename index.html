@@ -1,89 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEVAHETU</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #222;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 20px;
-    }
+<meta charset="UTF-8">
+<title>SEVAHETU – Emergency Support India</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .container {
-      max-width: 900px;
-      background: #fff;
-      padding: 50px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+<style>
+body{margin:0;font-family:Arial;background:#f4f7ff;color:#0a2d57}
+section{padding:70px 20px;text-align:center}
+.hero{background:#eef4ff}
+h1{font-size:38px}
+p{max-width:700px;margin:auto;color:#333}
 
-    h1 {
-      font-size: 2.8rem;   /* Heading size bada */
-      margin-bottom: 25px;
-      color: #333;
-      line-height: 1.4;
-    }
+.btn{padding:12px 22px;border-radius:8px;border:none;font-size:16px;margin:6px;cursor:pointer}
+.blue{background:#2563eb;color:white}
+.outline{background:white;border:2px solid #2563eb;color:#2563eb}
 
-    p {
-      font-size: 1.4rem;   /* Subheading size bada */
-      margin-bottom: 40px;
-      color: #555;
-      line-height: 1.6;
-    }
+.cards{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.card{background:#f7fbff;padding:25px;border-radius:12px;width:260px;text-align:left}
 
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+.how{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:40px}
+.list{text-align:left;max-width:400px}
 
-    .btn {
-      padding: 14px 24px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: 0.3s;
-      text-decoration: none;
-      color: #fff;
-    }
+.launch{background:#2563eb;color:white}
+.notify{display:flex;justify-content:center;gap:15px;margin-top:25px;flex-wrap:wrap}
+.notify input{padding:14px;width:280px;border-radius:8px;border:none}
+.notify button{padding:14px 24px;border:none;border-radius:8px;background:white;color:#2563eb;font-weight:bold}
 
-    .btn-whatsapp {
-      background: #25D366;
-    }
+footer{background:#0f1f33;color:white;padding:60px 20px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;max-width:1100px;margin:auto}
+footer a{color:#c7d2fe;text-decoration:none}
 
-    .btn-info {
-      background: #007BFF;
-    }
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 22px;
+border-radius:50px;
+text-decoration:none;
+}
 
-    .btn-dev {
-      background: #6c757d;
-    }
-
-    .btn:hover {
-      opacity: 0.85;
-    }
-  </style>
+.copyright{text-align:center;margin-top:40px;color:#94a3b8}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Ground-Level Emergency Non-Medical Support When Every Minute Matters Powered by Technology</h1>
-    <p>SEVAHETU helps patients navigate hospitals faster during emergencies through real-time coordination and on-ground support.</p>
-    <div class="buttons">
-      <a href="https://wa.me/your-number" class="btn btn-whatsapp">Contact on WhatsApp</a>
-      <a href="#how-it-works" class="btn btn-info">Understanding How Sevahatu Works</a>
-      <a href="#" class="btn btn-dev">We're in Development...</a>
-    </div>
-  </div>
+
+<section class="hero">
+<h1>
+Ground-Level Emergency Non-Medical Support<br>
+When Every Minute Matters<br>
+Powered by Technology
+</h1>
+
+<p>SEVAHETU helps patients navigate hospitals faster during emergencies through real-time coordination and on-ground support.</p>
+
+<button class="btn outline">Contact on WhatsApp</button>
+<button class="btn blue">Understanding How Sevahertu Works</button>
+<button class="btn blue">We're in Development...</button>
+</section>
+
+<section>
+<h2>The Real Emergency Problem Isn't Just Ambulances</h2>
+<div class="cards">
+<div class="card"><b>Confusion</b><p>Patients don’t know which hospital fits their condition.</p></div>
+<div class="card"><b>Delays</b><p>Paperwork & navigation waste critical time.</p></div>
+<div class="card"><b>Navigation Issues</b><p>Families feel lost inside big hospitals.</p></div>
+</div>
+</section>
+
+<section>
+<h2>How SEVAHETU Helps</h2>
+<div class="how">
+<div class="list">
+<p>✅ Location based hospital discovery</p>
+<p>✅ Condition based matching</p>
+<p>✅ Advance coordination</p>
+<p>✅ Ground-level guidance</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Why Sevahertu Matters</h2>
+<div class="cards">
+<div class="card">Saves Time</div>
+<div class="card">Reduces Panic</div>
+<div class="card">Improves Experience</div>
+<div class="card">Supports Patients</div>
+</div>
+</section>
+
+<section>
+<h2>Working Towards Licensed Partnerships</h2>
+<div class="cards">
+<div class="card">Ambulances</div>
+<div class="card">Test Labs</div>
+<div class="card">Pharmacies</div>
+</div>
+</section>
+
+<section>
+<h2>Transparency & Ethics</h2>
+<p>✔ Patient privacy respected<br>
+✔ Data only for emergencies<br>
+✔ No medical diagnosis provided</p>
+</section>
+
+<section class="launch">
+<h2>Emergency Support Service – In Development</h2>
+<p>We're bringing Sevahertu emergency support across India.</p>
+
+<div class="notify">
+<input placeholder="Your email address">
+<button>Notify Me</button>
+</div>
+</section>
+
+<footer>
+<div class="footer-grid">
+
+<div>
+<b>About Us</b><br><br>
+Registered MSME – Govt of India<br>
+UDYAM-DL-04-0071224
+</div>
+
+<div>
+<b>Quick Links</b><br>
+How it Works<br>
+Contact<br>
+Privacy Policy
+</div>
+
+<div>
+<b>Contact</b><br>
+helpsevahertu@gmail.com<br>
++91 7982600602<br>
+Delhi, India
+</div>
+
+<div>
+<b>Social</b><br>
+X – sevahetu<br>
+LinkedIn – SEVAHETU
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 SEVAHETU. All rights reserved.
+</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917982600602?text=I%20need%20emergency%20support%20from%20SEVAHETU" target="_blank">
+Emergency WhatsApp
+</a>
+
 </body>
 </html>
