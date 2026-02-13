@@ -7,19 +7,26 @@
 
 <style>.topmenu{position:absolute;top:25px;right:40px;}
 
-
-
-.topmenu a{
-margin-left:20px;
-text-decoration:none;
-color:#2563eb;
-font-weight:bold;
-}
+.topmenu a{margin-left:20px;text-decoration:none;color:#2563eb;font-weight:bold;}
 
 body <div class="topmenu">
   <a href="#how">How It Works</a>
   <a href="#contact">Contact</a>
 </div>
+@media(max-width:768px){
+
+h1{font-size:36px;line-height:1.2;padding:0 15px;}
+
+p{font-size:17px;padding:0 15px;}
+
+.cards{
+flex-direction:column;}
+
+.card{
+width:100%;}
+
+.topmenu{
+position:relative;text-align:center;margin-bottom:20px;}
 
 </div>
 {margin:0;font-family:Arial;background:#f4f7ff;color:#0a2d57}
