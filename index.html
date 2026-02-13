@@ -184,8 +184,27 @@
          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
        </div>
-       <h3 class="text-lg font-bold text-gray-900 mb-2">Saves Time</h3>
-       <p class="text-gray-600 text-sm">Reduces admission and treatment delays.</p>
+      <div onclick="toggleTime()" class="cursor-pointer bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+  <h3 class="text-lg font-bold text-blue-600">Saves Time</h3>
+  <p class="text-gray-600">Reduces admission and treatment delays.</p>
+
+  <div id="timeText" class="hidden mt-3 text-gray-700 text-sm leading-relaxed">
+    During emergencies, families often lose precious time finding the right entrance,
+    filling admission forms, locating wheelchairs, and navigating the hospital.<br><br>
+
+    Sevahetu prepares everything in advance — from arranging wheelchairs and assisting
+    with paperwork to guiding patients directly to the right department. This helps
+    patients get admitted faster and start treatment sooner, while families avoid
+    unnecessary stress and confusion.
+  </div>
+</div>
+
+<script>
+function toggleTime() {
+  document.getElementById("timeText").classList.toggle("hidden");
+}
+</script>
+
       </div><!-- Reduces Panic -->
       <div class="bg-white p-6 rounded-2xl shadow-md card-hover text-center">
        <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
